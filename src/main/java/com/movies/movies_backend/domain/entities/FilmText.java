@@ -9,7 +9,11 @@ import jakarta.persistence.Table;
 @Table(name = "film_text")
 public class FilmText {
 
+    
+    
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "film_id", columnDefinition = "SMALLINT", nullable = false)
     private int filmtextid;
 
@@ -45,4 +49,6 @@ public class FilmText {
     public void setTextfilmtext(String textfilmtext) {
         this.textfilmtext = textfilmtext;
     }
+
+
 }

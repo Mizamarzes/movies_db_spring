@@ -53,5 +53,13 @@ public class Pais {
         this.ultima_actualizacion_pais = ultima_actualizacion_pais;
     }
 
+    public List<Ciudad> getCiudades() {
+        return ciudades;
+    }
+
+    public void setCiudades(List<Ciudad> ciudades) {
+        this.ciudades = ciudades;
+    }
+
     
 }

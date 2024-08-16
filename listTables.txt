@@ -1,0 +1,18 @@
+
+
+- alquiler
+- pago
+- film_text
+- pelicula_categoria
+- categoria
+- pelicula_actor
+- actor
+- inventario
+- almacen
+- cliente
+- pelicula
+- idioma
+- direccion
+- empleado
+- ciudad
+- pais

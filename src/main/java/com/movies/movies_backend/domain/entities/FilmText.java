@@ -2,20 +2,18 @@ package com.movies.movies_backend.domain.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "film_text")
 public class FilmText {
-
-    
-    
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "film_id", columnDefinition = "SMALLINT", nullable = false)
-    private int filmtextid;
+    private Long filmtextid;
 
     @Column(name = "title", columnDefinition = "VARCHAR(255)", nullable = false)
     private String titlefilmtext;
@@ -26,11 +24,11 @@ public class FilmText {
     public FilmText() {
     }
 
-    public int getFilmtextid() {
+    public Long getFilmtextid() {
         return filmtextid;
     }
 
-    public void setFilmtextid(int filmtextid) {
+    public void setFilmtextid(Long filmtextid) {
         this.filmtextid = filmtextid;
     }
 
@@ -49,6 +47,4 @@ public class FilmText {
     public void setTextfilmtext(String textfilmtext) {
         this.textfilmtext = textfilmtext;
     }
-
-
 }

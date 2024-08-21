@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 public class Ciudad {
     @Id
     @Column(name = "id_ciudad", columnDefinition = "SMALLINT UNSIGNED", nullable = true)
-    private int id_ciudad;
+    private Long id_ciudad;
 
     @Column(name = "nombre", columnDefinition = "VARCHAR(50)", nullable = true)
     private String nombreciudad;
@@ -29,17 +29,17 @@ public class Ciudad {
     public Ciudad() {
     }
 
-    public Ciudad(int id_ciudad, String nombreciudad, Timestamp ultima_actualizacion_ciudad) {
+    public Ciudad(Long id_ciudad, String nombreciudad, Timestamp ultima_actualizacion_ciudad) {
         this.id_ciudad = id_ciudad;
         this.nombreciudad = nombreciudad;
         this.ultima_actualizacion_ciudad = ultima_actualizacion_ciudad;
     }
 
-    public int getId_ciudad() {
+    public Long getId_ciudad() {
         return id_ciudad;
     }
 
-    public void setId_ciudad(int id_ciudad) {
+    public void setId_ciudad(Long id_ciudad) {
         this.id_ciudad = id_ciudad;
     }
 

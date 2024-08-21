@@ -15,7 +15,7 @@ public class Pais {
 
     @Id
     @Column(name = "id_pais", columnDefinition = "SMALLINT UNSIGNED", nullable = false)
-    private int idpais;
+    private Long idpais;
 
     @Column(name = "nombre", columnDefinition = "VARCHAR(50)", nullable = false)
     private String namepais;
@@ -29,11 +29,11 @@ public class Pais {
     public Pais() {
     }
 
-    public int getIdpais() {
+    public Long getIdpais() {
         return idpais;
     }
 
-    public void setIdpais(int idpais) {
+    public void setIdpais(Long idpais) {
         this.idpais = idpais;
     }
 

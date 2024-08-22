@@ -6,43 +6,45 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.movies.movies_backend.domain.entities.Pais;
-import com.movies.movies_backend.domain.repository.PaisRepository;
-import com.movies.movies_backend.domain.service.PaisService;
+import com.movies.movies_backend.domain.entities.Country;
+import com.movies.movies_backend.domain.repository.CountryRepository;
+import com.movies.movies_backend.domain.service.CountryService;
 
-public class PaisImpl implements PaisService {
+@Service
+public class PaisImpl implements CountryService {
 
     @Autowired
-    private PaisRepository paisRepository;
+    private CountryRepository paisRepository;
 
     @Transactional
     @Override
-    public Page<Pais> findAll(Pageable pageable){
-        return (Page<Pais>) paisRepository.findAll();
+    public Page<Country> findAll(Pageable pageable){
+        return (Page<Country>) paisRepository.findAll();
     }
 
     @Transactional
     @Override
-    public Optional<Pais> findById(Long id) {
+    public Optional<Country> findById(Long id) {
         return paisRepository.findById(id);
     }
 
     @Transactional
     @Override
-    public Pais save(Pais pais) {
+    public Country save(Country pais) {
         return paisRepository.save(pais);
     }
 
     @Override
-    public Pais update(Long id) {
+    public Country update(Long id) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'update'");
     }
 
     @Override
-    public Optional<Pais> delete(Long id) {
+    public Optional<Country> delete(Long id) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'delete'");
     }
